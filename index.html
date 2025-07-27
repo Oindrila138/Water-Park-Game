@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pool Toy Collector</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="game-header">
+            <div class="game-title">
+                <h1>Splash & Catch</h1>
+            </div>
+            
+            <div class="game-controls">
+                <button class="btn btn-start" id="startBtn">START GAME</button>
+                <button class="btn btn-restart" id="restartBtn">RESTART</button>
+                <div class="game-duration">
+                    <label for="gameDuration">Game Duration:</label>
+                    <select id="gameDuration">
+                        <option value="60">1 Minute</option>
+                        <option value="120">2 Minutes</option>
+                    </select>
+                </div>
+                <div class="volume-control">
+                    <label for="volumeSlider"> Volume:</label>
+                    <input type="range" id="volumeSlider" min="0" max="100" value="50" class="volume-slider">
+                    <span id="volumeDisplay">50%</span>
+                </div>
+            </div>
+            
+            <div class="game-stats">
+                <div class="stat score">Score: <span id="scoreDisplay">0</span></div>
+                <div class="stat time-left">Time Left: <span id="timeDisplay">60s</span></div>
+            </div>
+        </div>
+
+        <div class="game-area">
+            <div class="instructions">
+                <h3>How to Play</h3>
+                <ul>
+                    <li>Use Arrow Keys or WASD to swim around the pool</li>
+                    <li>Press SPACEBAR when near a toy to collect it</li>
+                    <li>Collect colorful submersible toys before they sink to the bottom</li>
+                    <li>Toys get smaller and harder to see as they sink - act fast!</li>
+                    <li>Each toy collected = +1 point</li>
+                    <li>Success sound when you collect a toy</li>
+                    <li>Fail sound when you miss a toy</li>
+                    <li>Special sounds for game start and end</li>
+                    <li>Choose between 1 or 2 minute game duration</li>
+                    <li>Use the volume slider to control sound levels</li>
+                </ul>
+            </div>
+            
+            <div class="game-canvas-container">
+                <div class="game-message" id="gameMessage">Press Start to Begin!</div>
+                <canvas id="ex3canvas" width="800" height="470"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
